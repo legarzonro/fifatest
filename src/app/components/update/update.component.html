@@ -1,0 +1,41 @@
+<div style="width: 100%;">
+    <form [formGroup]="form" style="width: 500px;">
+        <mat-form-field style="width: 100%;">
+            <mat-label>Nombre </mat-label>
+            <input matInput formControlName="nombre">
+        </mat-form-field>
+        <mat-form-field style="width: 100%;">
+            <mat-label>Estadio </mat-label>
+            <input matInput formControlName="estadio">
+        </mat-form-field>
+        <mat-form-field style="width: 100%;">
+            <mat-label>Sitio Web </mat-label>
+            <input matInput formControlName="sitioWeb">
+        </mat-form-field>
+        <mat-form-field style="width: 100%;">
+            <mat-label>Nacionalidad </mat-label>
+            <input matInput formControlName="nacionalidad">
+        </mat-form-field>
+        <mat-form-field style="width: 100%;">
+            <mat-label>Año de Fundación </mat-label>
+            <input matInput formControlName="fundacion" [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field style="width: 100%;">
+            <mat-label>Entrenador </mat-label>
+            <input matInput formControlName="entrenador">
+        </mat-form-field>
+        <mat-form-field style="width: 100%;">
+            <mat-label>Capacidad </mat-label>
+            <input matInput formControlName="capacidad">
+        </mat-form-field>
+        <mat-form-field style="width: 100%;">
+            <mat-label>Valor </mat-label>
+            <input matInput formControlName="valor">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="update()">Actualizar</button>
+
+    </form>
+</div>
